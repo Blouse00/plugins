@@ -727,8 +727,8 @@ class Camera
     try {
       // Cancel existing AF state.
       previewRequestBuilder.set(
-          CaptureRequest.CONTROL_AF_TRIGGER, CameraMetadata.CONTROL_AF_TRIGGER_CANCEL);
-      captureSession.capture(previewRequestBuilder.build(), null, backgroundHandler);
+          CaptureRequest.CONTROL_AE_PRECAPTURE_TRIGGER,
+          CaptureRequest.CONTROL_AE_PRECAPTURE_TRIGGER_IDLE);
 
       // Set AF state to idle again.
       previewRequestBuilder.set(
